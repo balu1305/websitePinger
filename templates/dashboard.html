@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Status Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1 class="mt-5">Server Status Dashboard</h1>
+        <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for hosts.." class="form-control mb-3">
         <table class="table table-striped mt-3">
             <thead>
                 <tr>
-                    <th>Host</th>
-                    <th>Status</th>
-                    <th>Timestamp</th>
+                    <th onclick="sortTable(0)">Host</th>
+                    <th onclick="sortTable(1)">Status</th>
+                    <th onclick="sortTable(2)">Timestamp</th>
                 </tr>
             </thead>
             <tbody>
-                {% for row in data %}
-                <tr>
-                    <td>{{ row[0] }}</td>
-                    <td>{{ row[1] }}</td>
-                    <td>{{ row[2] }}</td>
-                </tr>
-                {% endfor %}
+                <!-- Table rows will be populated by JavaScript -->
             </tbody>
         </table>
+        <button class="btn-neon" onclick="exportTableToCSV('server_status.csv')">Export CSV</button>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>

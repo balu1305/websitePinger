@@ -1,0 +1,62 @@
+/* Neon Gradient Background */
+body {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    color: #ffffff; /* White text */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Neon Green for Heading */
+h1 {
+    color: #39ff14; /* Neon green */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Table Styling */
+.table {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for table */
+    color: #ffffff; /* White text */
+}
+
+/* Table Header Styling */
+.table th {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker semi-transparent background for table headers */
+    color: #39ff14; /* Neon green text */
+}
+
+/* Table Cell Styling */
+.table td {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for table cells */
+    color: #ffffff; /* White text */
+}
+
+/* Striped Rows Styling */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background for odd rows */
+}
+
+/* Container Margin */
+.container {
+    margin-top: 50px;
+}
+
+/* Neon Button Styling */
+.btn-neon {
+    background-color: #39ff14; /* Neon green */
+    border: none;
+    color: #000000; /* Black text */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-neon:hover {
+    background-color: #ffffff; /* White background on hover */
+    color: #39ff14; /* Neon green text on hover */
+    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #39ff14;
+}
